@@ -5,12 +5,14 @@
 using namespace std;
 
 class CCola {
-public:
-	CCola() : primero(NULL), ultimo(NULL) {}
-	~CCola();
-	void Encolar(int v);
-	int Desencolar();
-	void MostrarLista();
 private:
-	CNodo* primero, * ultimo;
+	CNodo* ultimo;
+	CNodo* primero;
+
+public:
+	CCola() : ultimo(NULL), primero(NULL) {}
+	~CCola();
+	void Push(int valor);
+	int Pop();
+	void ImprimirCola();
 };

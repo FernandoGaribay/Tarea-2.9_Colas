@@ -1,12 +1,11 @@
 #include "CCola.h"
 
-CCola::~CCola()
-{
-	while (primero) Desencolar();
+CCola::~CCola(){
+	while(primero) 
+		Pop();
 }
 
-void CCola::Encolar(int v)
-{
+void CCola::Push(int v) {
 	CNodo* nuevo; 
 
 	nuevo = new CNodo(v);
@@ -20,7 +19,7 @@ void CCola::Encolar(int v)
 		primero = nuevo;
 }
 
-int CCola::Desencolar() {
+int CCola::Pop() {
 	CNodo* nodo; 
 	int v; 
 
@@ -39,16 +38,16 @@ int CCola::Desencolar() {
 	return v;
 }
 
-void CCola::MostrarLista() {
+void CCola::ImprimirCola() {
 	CNodo* nodo = primero;
 
 	if (nodo == NULL)
-		cout << "Cola vacia " << endl;
+		cout << "LA COLA ESTA VACIA." << endl;
 	else {
 		while (nodo) {
-			cout << nodo->valor << "-> ";
+			cout << nodo->valor << " <- ";
 			nodo = nodo->siguiente;
 		}
-		cout << endl;
+		cout << "NULL" << endl;
 	}
 }

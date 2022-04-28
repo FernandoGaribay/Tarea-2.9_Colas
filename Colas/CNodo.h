@@ -9,8 +9,8 @@ private:
 	CNodo* siguiente;
 
 public:
-	CNodo(int v);
-	CNodo(int v, CNodo* sig);
+	CNodo(int valor_);
+	CNodo(int valor_, CNodo* siguiente_);
 	int getValor();
 	CNodo* getSiguiente();
 
