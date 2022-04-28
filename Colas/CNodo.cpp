@@ -1,8 +1,4 @@
 #include "CNodo.h"
-#include <iostream>
-
-using namespace std; 
-
 
 CNodo::CNodo(int v, CNodo* sig) {
 	valor = v;
