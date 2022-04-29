@@ -20,23 +20,23 @@ void CCola::Push(int v) {
 }
 
 int CCola::Pop() {
-	CNodo* nodo; 
-	int v; 
+	CNodo* aux;
+	int v;
 
-	nodo = primero;
+	aux = primero;
+	if (!aux)
+		return 0;
 
-	if (!nodo) 
-		return 0; 
+	primero = aux->siguiente;
+	v = aux->valor;
+	delete aux;
 
-	primero = nodo->siguiente;
-	v = nodo->valor;
-	delete nodo;
-
-	if (!primero) 
+	if (!primero)
 		ultimo = NULL;
 
 	return v;
 }
+
 
 void CCola::ImprimirCola() {
 	CNodo* nodo = primero;
